@@ -58,9 +58,6 @@ Installation is done using the
 $ npm install api-express-exporter
 ```
 
-Follow [our installing guide](http://expressjs.com/en/starter/installing.html)
-for more information.
-
 This package depends on `express`, `prom-client`, `express-list-endpoints`, `express-prom-bundle`, and `url-pattern`
 
 ## Configuration
