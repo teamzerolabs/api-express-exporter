@@ -1,0 +1,38 @@
+{
+  "name": "api-express-exporter",
+  "version": "1.0.0",
+  "description": "api-express-exporter is a prometheus exporter that helps you track express api requests.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teamzerolabs/api-express-exporter.git"
+  },
+  "keywords": [
+    "express",
+    "monitoring",
+    "prometheus",
+    "exporter"
+  ],
+  "author": "Jack Yeh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/teamzerolabs/api-express-exporter/issues"
+  },
+  "peerDependencies": {
+    "express": "4.x",
+    "prom-client": "^11.5.0"
+  },
+  "homepage": "https://github.com/teamzerolabs/api-express-exporter#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.2",
+    "@types/node": "^13.7.0",
+    "typescript": "^3.7.5"
+  },
+  "dependencies": {
+    "express-list-endpoints": "^4.0.1",
+    "express-prom-bundle": "^5.1.5",
+    "prom-client": "^11.5.3",
+    "url-pattern": "^1.0.3",
+    "express": "^4.17.1"
+  }
+}
