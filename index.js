@@ -20,7 +20,7 @@ const setupMetricService = option => {
   const port = option.port || 9991;
 
   metricServer.listen(port, host, () => {
-    console.log(`Metrics server listening on ${host}:${port}`);
+    option.logger(`Metrics server listening on ${host}:${port}`);
   });
 };
 
@@ -36,7 +36,7 @@ const captureAllRoutes = (option, app) => {
       route.path = route.path.replace(/\/$/, "");
     }
 
-    console.log(`Route found: ${route.path}`);
+    option.logger(`Route found: ${route.path}`);
     route.pattern = route.path;
 
     // NOTE: urlPatternMaker has to create an UrlPattern compatible object.
@@ -98,6 +98,10 @@ const makeApiMiddleware = (option = {}) => {
   if (option.createServer === undefined || option.createServer) {
     setupMetricService(option);
   }
+
+  option.logger = option.logger
+    ? option.logger
+    : console.log
 
   return (req, res, next) => {
     if (allRoutes.length === 0) {

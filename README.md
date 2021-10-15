@@ -69,6 +69,7 @@ This package depends on `express`, `prom-client`, `express-list-endpoints`, `exp
 | urlPatternMaker  | function to create the url pattern matcher, defaults to `(path) => new UrlPattern(path, { segmentNameCharset: "a-zA-Z0-9_-" })`  |
 | normalizePath    | boolean. Set this to false to use the original url instead of cleaned up ones. |
 | createServer     | boolean. Set this to false to not create the exporter server endpoint |
+| logger           | function. Use this to pass in a custom logger function. Useful when you're using [pino](https://github.com/pinojs/pino#readme), [bunyan](https://github.com/trentm/node-bunyan#readme), [winston](https://github.com/winstonjs/winston#readme), or another custom logger. Defaults to `console.log` |
 
 ## Sample Output
 
