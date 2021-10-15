@@ -65,7 +65,7 @@ This package depends on `express`, `prom-client`, `express-list-endpoints`, `exp
 | Option Name      | Description  |
 |------------------|--------------|
 | host             | host string for the metrics server. Defaults to `127.0.0.1`  |
-| port             | port that metrics server listens on. Defaults to 9991        |
+| port             | port that metrics server listens on. Defaults to `9991`        |
 | urlPatternMaker  | function to create the url pattern matcher, defaults to `(path) => new UrlPattern(path, { segmentNameCharset: "a-zA-Z0-9_-" })`  |
 | normalizePath    | boolean. Set this to false to use the original url instead of cleaned up ones. |
 | createServer     | boolean. Set this to false to not create the exporter server endpoint |
