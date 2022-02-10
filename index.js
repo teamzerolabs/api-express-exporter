@@ -31,7 +31,7 @@ const captureAllRoutes = (option, app) => {
   );
 
   allRoutes.forEach(route => {
-    if (route.path.endsWith("/")) {
+    if (route.path.endsWith("/") && route.path !== "/") {
       // Remove trailing slash
       route.path = route.path.replace(/\/$/, "");
     }
